@@ -10,6 +10,7 @@ This project addresses a regression problem: estimating house values based on va
 ---
 
 ## Repository Structure
+```text
 project prediction/
 │
 ├── static/
@@ -23,6 +24,7 @@ project prediction/
 ├── persisting_model.py      # Script to build pipeline and export trained models
 ├── app.py                   # Flask server handling web requests and inference
 └── housing.csv              # California housing dataset
+```
 
 ## Machine Learning Pipeline & Workflow
 Stratified Train-Test Split: Data is split based on income categories (median_income) to maintain class proportions.
