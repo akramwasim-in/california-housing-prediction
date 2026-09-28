@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            California<span>Homes</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/predict" class="active">
+                Predict House Price
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Prediction Section -->
+
+    <section class="prediction-section">
+
+        <div class="prediction-container">
+
+            <div class="page-heading">
+
+                <p class="small-title">
+                    AI HOUSE VALUATION
+                </p>
+
+                <h1>
+                    Evaluate Your
+                    <span>House Price</span>
+                </h1>
+
+                <p>
+                    Enter the property information below to
+                    generate an estimated house value.
+                </p>
+
+            </div>
+
+
+            <!-- Form -->
+
+            <form method="POST"
+                  action="/predict"
+                  class="prediction-form">
+
+
+                <!-- Longitude -->
+
+                <div class="form-group">
+
+                    <label>
+                        Longitude
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="longitude"
+                        placeholder="e.g. -122.23"
+                        required>
+
+                </div>
+
+
+                <!-- Latitude -->
+
+                <div class="form-group">
+
+                    <label>
+                        Latitude
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="latitude"
+                        placeholder="e.g. 37.88"
+                        required>
+
+                </div>
+
+
+                <!-- Median Age -->
+
+                <div class="form-group">
+
+                    <label>
+                        Property Age
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="housing_median_age"
+                        placeholder="e.g. 25"
+                        required>
+
+                </div>
+
+
+                <!-- Total Rooms -->
+
+                <div class="form-group">
+
+                    <label>
+                        Total Rooms
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="total_rooms"
+                        placeholder="e.g. 2500"
+                        required>
+
+                </div>
+
+
+                <!-- Total Bedrooms -->
+
+                <div class="form-group">
+
+                    <label>
+                        Total Bedrooms
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="total_bedrooms"
+                        placeholder="e.g. 500"
+                        required>
+
+                </div>
+
+
+                <!-- Population -->
+
+                <div class="form-group">
+
+                    <label>
+                        Community Population
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="population"
+                        placeholder="e.g. 1200"
+                        required>
+
+                </div>
+
+
+                <!-- Households -->
+
+                <div class="form-group">
+
+                    <label>
+                        Number of Households
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="households"
+                        placeholder="e.g. 400"
+                        required>
+
+                </div>
+
+
+                <!-- Median Income -->
+
+                <div class="form-group">
+
+                    <label>
+                        Median Household Income
+                    </label>
+
+                    <input
+                        type="number"
+                        step="any"
+                        name="median_income"
+                        placeholder="e.g. 4.5"
+                        required>
+
+                </div>
+
+
+                <!-- Ocean Proximity -->
+
+                <div class="form-group full-width">
+
+                    <label>
+                        Location / Ocean Proximity
+                    </label>
+
+                    <select name="ocean_proximity" required>
+
+                        <option value="">
+                            Select Location
+                        </option>
+
+                        <option value="NEAR BAY">
+                            Near Bay
+                        </option>
+
+                        <option value="<1H OCEAN">
+                            Less than 1 Hour from Ocean
+                        </option>
+
+                        <option value="INLAND">
+                            Inland
+                        </option>
+
+                        <option value="NEAR OCEAN">
+                            Near Ocean
+                        </option>
+
+                        <option value="ISLAND">
+                            Island
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Submit -->
+
+                <button type="submit"
+                        class="predict-button">
+
+                    🔮 Estimate House Value
+
+                </button>
+
+            </form>
+
+
+            <!-- Result -->
+
+            {% if prediction is not none %}
+
+            <div class="result-card">
+
+                <p>
+                    ESTIMATED PROPERTY VALUE
+                </p>
+
+                <h2>
+                    ${{ "{:,.2f}".format(prediction) }}
+                </h2>
+
+                <span>
+                    Based on the information provided
+                </span>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

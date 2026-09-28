@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>California Housing Analytics</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">
+            California<span>Homes</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/predict">Predict House Price</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                MACHINE LEARNING POWERED
+            </p>
+
+            <h1>
+                Discover the Estimated
+                <span>Value of Your Home</span>
+            </h1>
+
+            <p class="description">
+                Enter property details and let our machine learning
+                model estimate the property's market value.
+            </p>
+
+            <a href="/predict" class="hero-button">
+                Predict House Price
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature-card">
+
+            <h2>🤖 Machine Learning</h2>
+
+            <p>
+                Powered by a Random Forest Regression model
+                trained on California housing data.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h2>📊 Data Driven</h2>
+
+            <p>
+                Predictions are generated using property,
+                location and income information.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <h2>⚡ Instant Prediction</h2>
+
+            <p>
+                Enter your property information and receive
+                an estimated house value instantly.
+            </p>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

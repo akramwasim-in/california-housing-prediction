@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 75px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #396afc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #396afc;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 580px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #eef3ff,
+            #ffffff
+        );
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.small-title {
+    color: #396afc;
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+.page-heading h1 span {
+    color: #396afc;
+}
+
+.description {
+    font-size: 19px;
+    line-height: 1.7;
+
+    color: #5e6678;
+
+    max-width: 650px;
+
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    background: #396afc;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 28px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #274fd1;
+    transform: translateY(-2px);
+}
+
+
+/* ================= FEATURES ================= */
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    padding: 60px 10%;
+
+    background: white;
+}
+
+.feature-card {
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: #f7f9ff;
+
+    border: 1px solid #e5e9f5;
+}
+
+.feature-card h2 {
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #626b7e;
+
+    line-height: 1.6;
+}
+
+
+/* ================= PREDICTION ================= */
+
+.prediction-section {
+    padding: 60px 8%;
+}
+
+.prediction-container {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.page-heading h1 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.page-heading p:last-child {
+    color: #697386;
+}
+
+
+/* ================= FORM ================= */
+
+.prediction-form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.07);
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px;
+
+    border: 1px solid #d9deea;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #396afc;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.predict-button {
+    grid-column: 1 / -1;
+
+    border: none;
+
+    padding: 16px;
+
+    border-radius: 8px;
+
+    background: #396afc;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.predict-button:hover {
+    background: #274fd1;
+}
+
+
+/* ================= RESULT ================= */
+
+.result-card {
+    margin-top: 35px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    background: #172033;
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.result-card p {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    color: #aeb8cf;
+
+    margin-bottom: 12px;
+}
+
+.result-card h2 {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.result-card span {
+    color: #aeb8cf;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-form {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .predict-button {
+        grid-column: auto;
+    }
+}
