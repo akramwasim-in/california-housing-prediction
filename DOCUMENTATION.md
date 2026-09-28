@@ -31,7 +31,8 @@ project prediction/
 ├── app.py                   # Flask server entry point
 ├── housing.csv              # Raw dataset
 ├── README.md                # Quick repository overview
-└── DOCUMENTATION.md         # Comprehensive technical report```
+└── DOCUMENTATION.md         # Comprehensive technical report
+```
 
 ## 4. Machine Learning Workflow
 # 4.1 Data Ingestion & Stratified Splitting
