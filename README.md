@@ -10,7 +10,6 @@ This project addresses a regression problem: estimating house values based on va
 ---
 
 ## Repository Structure
-```text
 project prediction/
 │
 ├── static/
