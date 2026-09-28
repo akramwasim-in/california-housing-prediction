@@ -1,4 +1,5 @@
 *.pkl
-*.csv
+input.csv
+ouput.csv
 __pycache__/
 .env
