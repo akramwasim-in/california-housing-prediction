@@ -104,9 +104,11 @@ Step 1: Clone Repository
 Bash
 git clone https://github.com/akramwasim-in/california-housing-prediction.git
 cd california-housing-prediction
+
 Step 2: Install Dependencies
 Bash
 pip install pandas numpy scikit-learn flask joblib
+
 Step 3: Train and Export Model Artifacts
 Execute the persistence script to generate model.pkl and pipeline.pkl:
 
